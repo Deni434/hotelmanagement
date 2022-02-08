@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>Hotel PALAZZO</title>
+		<meta charset = "utf-8" />
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0" />
+		<link rel = "stylesheet" type = "text/css" href = "css/bootstrap.css " />
+		<link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+		<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCqRQUzG8s_7YAqkbG7nxTRD41eul1dMwA&sensor=false">
+        </script>
+        <script>
+        var myCenter=new google.maps.LatLng(41.386583,2.195114);
+
+        function initialize()
+{
+var mapProp = {
+  center:myCenter,
+  zoom:15,
+  mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var marker=new google.maps.Marker({
+  position:myCenter,
+  });
+
+marker.setMap(map);
+
+var infowindow = new google.maps.InfoWindow({
+  content:"We are here!"
+  });
+
+infowindow.open(map,marker);
+}
+
+</script>
+		
+	</head>
+<body style = "background-image: url('images/bcg.png');"onload="initialize()">
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+  <div class="container">
+		<div class="navbar-header">
+		<button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button> 
+		<a href="./" class="navbar-brand">Hotel PALAZZO</a>
+		</div>
+		<nav class="collapse-navbar" role="navigation">
+		<ul class="nav navbar-nav navbar-right">
+		<li><a href = "index.html">Home</a></li> 
+		<li><a href = "aboutus.html">About Us</a></li> 
+		<li><a href = "gallery.html">Gallery</a></li>
+		<li><a href = "dineandlounge2.html">Dine and Lounge</a></li> 			
+		<li class="active"><a href = "reservation.php">Reservation</a></li> 
+		<li><a href = "rulesandregulation2.html">Rules and Regulation</a></li>
+        <li class="active">
+          <a href="contactus2.html">Contact</a>
+		<li>
+        </li>
+			<li style="margin-right: -80px; margin-left: 45px;border:0.5px  solid black;border-radius: 8px; font-size: 13px; font-weight: 600;"> <a href="admin/index.php"><img src="images/user-solid.png" />  Admin</a></li>
+      
+      </ul>
+		</nav>
+  </div>
+</header>
+	<div style = "margin-left:10;" class = "container">
+			<div class = "panel-body">
+				<br>
+				<br>
+				<center><h1 style="display: inline-flex;"><strong><font size="10" face="Times New Roman" color="Green"><div style="background-color: white;">CONTACT US</div></font></strong></h1></div></center>
+				<br />
+				<br />
+				<center><img src = "images/unnamed.jpg" width = "900" height = "300" /></center>
+				<br />
+				<br />
+				<center>
+				<p style="display: inline-flex;background-color: white;"><font size="6" face="Times New Roman" color="Green">Contact No:</font> <font size="6" face="Times New Roman" color="black" >+355684340666</font></p>
+				<br><p style="display: inline-flex;background-color: white;"><font size="6" face="Times New Roman" color="green">Email:</font>
+					<font size="6" face="Times New Roman" color="black"> dhoma@hotel.com</font></p>
+				</center>
+			
+		</div>
+	</div>
+	<br />
+	<br />
+	<div class="map">
+		<div class="map-locL">
+			<p><font size="6" face="Times New Roman" color="white">Contact No:</font> <font size="6" face="Times New Roman" color="white" >+355684340666</font></p>
+		</div>
+		<div class="map-loc" id="googleMap" ></div>
+	</div>
+		<footer>
+			<div style = "text-align:right; " class = "footer">
+		<label style="color:white;  margin: 12px; margin-right: 20px; ">&copy; Copyright: DEFSA </label>
+	</div>
+	</footer>
+</body>	
+</html>
